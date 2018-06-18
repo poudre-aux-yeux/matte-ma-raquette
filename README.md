@@ -1,5 +1,7 @@
 # Matte ma raquette
 
+[![Join the chat at https://gitter.im/poudre-aux-yeux/matte-ma-raquette](https://badges.gitter.im/poudre-aux-yeux/matte-ma-raquette.svg)](https://gitter.im/poudre-aux-yeux/matte-ma-raquette?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Ecosystem
 
 **Back-end:**
