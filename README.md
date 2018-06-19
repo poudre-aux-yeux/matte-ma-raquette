@@ -23,26 +23,22 @@ Back-office Web application to administrate accounts, players, matches, stadiums
 
 Develop with Docker Compose.
 
-To debug an UI :
+To develop an UI :
 
 ```sh
 # API
 docker-compose up api
-# Proxy
-docker run -d -p 8888:8888 -e API_HOST=localhost:3333 poudreauxyeux/mattemaraquette
 ```
 
-All the requests to the API should hit http://127.0.0.1:8888/graphql.
+In your UI, hit `http://127.0.0.1/graphql`.
 
-## Deployment
+To just run an UI :
 
-```Dockerfile
-FROM poudreauxyeux/mattemaraquette
-COPY dist .
-ENV PORT=80
-ENTRYPOINT ["/root/server"]
-EXPOSE 80
+```sh
+docker-compose up
 ```
+
+And hit the UI you want to browse.
 
 ## Kubernetes
 
