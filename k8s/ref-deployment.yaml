@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\BIN\kompose.exe -f docker-compose.yml convert
+    kompose.version: 1.5.0 (999278f)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ref
+  name: ref
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: ref
+    spec:
+      containers:
+      - env:
+        - name: API_HOST
+          value: api
+        image: poudreauxyeux/mon-arbitre-raquette
+        name: ref
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}

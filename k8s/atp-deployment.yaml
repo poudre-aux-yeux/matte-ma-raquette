@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\BIN\kompose.exe -f docker-compose.yml convert
+    kompose.version: 1.5.0 (999278f)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: atp
+  name: atp
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: atp
+    spec:
+      containers:
+      - env:
+        - name: API_HOST
+          value: api
+        image: poudreauxyeux/atp-live
+        name: atp
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}
