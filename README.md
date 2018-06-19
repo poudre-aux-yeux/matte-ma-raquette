@@ -46,4 +46,11 @@ EXPOSE 80
 
 ## Kubernetes
 
-TODO: High disponibility with Kubernetes
+Apply the latest k8s configuration (this will not pull the latest images)
+
+```sh
+kubectly apply -f k8s
+```
+
+To manually update a Docker image, delete the out-of-date deployment and apply
+the k8s config again.
