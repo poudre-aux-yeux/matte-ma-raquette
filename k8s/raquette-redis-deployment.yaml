@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: raquette-redis
   name: raquette-redis
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     type: Recreate
   template:
